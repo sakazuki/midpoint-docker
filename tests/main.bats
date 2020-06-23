@@ -19,7 +19,7 @@ load ../library
 }
 
 @test "010 Initialize and start midPoint" {
-    MP_CONTAINER_ID=$(docker run -d -p 8180:8080 --name midpoint evolveum/midpoint)
+    MP_CONTAINER_ID=$(docker run -d -p 8180:8080 --name midpoint evolveum/midpoint:3.9.1)
     wait_for_midpoint_start $MP_CONTAINER_ID
 }
 
